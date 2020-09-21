@@ -1,4 +1,4 @@
-export class Brick {
+export class Brick{
   x: BrickConfig['x'];
   y: BrickConfig['y'];
   #ctx: BrickConfig['ctx']
@@ -40,6 +40,10 @@ export class Brick {
       this.#ctx.fill();
       this.#ctx.closePath();
     }
+  }
+
+  destroy() {
+    this.status = false
   }
 }
 
